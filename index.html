@@ -104,65 +104,68 @@
             </fieldset>
 
             <fieldset>
-                <legend for="1956065897">👤 Il tuo nome</legend>
-                <div class="form-group mb-3">
+                <legend for="1956065897"><span style="font-size:1.3em;">👤</span> Il tuo nome</legend>
+                <div class="form-group mb-3 d-flex align-items-center">
+                    <span style="font-size:1.5em; margin-right:8px;">📝</span>
                     <input id="642746600" type="text" name="entry.642746600" class="form-control"
                         placeholder="Scrivi il tuo nome" required>
                 </div>
             </fieldset>
 
             <fieldset>
-                <legend for="1661924909">🍕 Scegli la pizza</legend>
+                <legend for="1661924909"><span style="font-size:1.3em;">🍕</span> Scegli la pizza</legend>
                 <div class="form-group mb-3">
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Marinara" required>
-                            🍅 Marinara
+                            <span style="font-size:1.2em;">🍅</span> Marinara
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Margherita" required>
-                            🧀 Margherita
+                            <span style="font-size:1.2em;">🧀</span> Margherita
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Diavola" required>
-                            🌶️ Diavola
+                            <span style="font-size:1.2em;">🌶️</span> Diavola
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Margherita provola e pepe" required>
-                            🧀 Margherita provola e pepe
+                            <span style="font-size:1.2em;">🧀</span> Margherita provola e pepe
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Provola, pomodorini e pepe" required>
-                            🧀🍅 Provola, pomodorini e pepe
+                            <span style="font-size:1.2em;">🧀🍅</span> Provola, pomodorini e pepe
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357" value="Biondo ( Mozzarella, cotto e funghi)"
                                 required>
-                            🍄 Biondo (Mozzarella, cotto e funghi)
+                            <span style="font-size:1.2em;">🍄</span> Biondo (Mozzarella, cotto e funghi)
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357"
                                 value="Gionsi ( Mozzarella, salame piccante, rucola, olio evo)" required>
-                            🥓 Gionsi (Mozzarella, salame piccante, rucola, olio evo)
+                            <span style="font-size:1.2em;">🥓</span> Gionsi (Mozzarella, salame piccante, rucola, olio
+                            evo)
                         </label>
                     </div>
                     <div class="radio">
                         <label>
                             <input type="radio" name="entry.1490613357"
                                 value="Fresca ( Mozzarella, pomodorini, rucola, crudo, scaglie)" required>
-                            🥗 Fresca (Mozzarella, pomodorini, rucola, crudo, scaglie)
+                            <span style="font-size:1.2em;">🥗</span> Fresca (Mozzarella, pomodorini, rucola, crudo,
+                            scaglie)
                         </label>
                     </div>
                     <div class="radio">
@@ -170,15 +173,24 @@
                             <input type="radio" name="entry.1490613357"
                                 value="Sorrentina ( Ripieno aperto - all&#x27;uscita rucola, pomodorini, scaglie, prosciutto crudo )"
                                 required>
-                            🥙 Sorrentina (Ripieno aperto - rucola, pomodorini, scaglie, prosciutto crudo)
+                            <span style="font-size:1.2em;">🥙</span> Sorrentina (Ripieno aperto - rucola, pomodorini,
+                            scaglie, prosciutto crudo)
                         </label>
                     </div>
-                    <div class="radio mb-2">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="entry.1490613357"
+                                value="Specifica sotto la tua pizza con gli ingredienti sopra citati" required>
+                            <span style="font-size:1.2em;">✏️</span> Specifica sotto la tua pizza con gli ingredienti
+                            sopra citati
+                        </label>
+                    </div>
+                    <div class="radio mb-2 d-flex align-items-center">
                         <label>
                             <input type="radio" name="entry.1490613357" value="__other_option__" required>
-                            Altro: ✏️ Specifica sotto la tua pizza con gli ingredienti sopra citati
+                            <span style="font-size:1.2em;">🆕</span> Altro:
                         </label>
-                        <input type="text" name="entry.1490613357.other_option_response" class="form-control mt-1"
+                        <input type="text" name="entry.1490613357.other_option_response" class="form-control ms-2 mt-1"
                             placeholder="Scrivi la tua pizza personalizzata">
                     </div>
                 </div>
@@ -199,11 +211,26 @@
             <p>Creato da Gionsi per la pizza night 🍕✨</p>
         </div>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
+        integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
-        document.getElementById('bootstrapForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            this.style.display = 'none';
-            document.getElementById('grazieMsg').classList.remove('d-none');
+        $('#bootstrapForm').submit(function (event) {
+            event.preventDefault();
+            var extraData = {};
+            $('#bootstrapForm').ajaxSubmit({
+                data: extraData,
+                dataType: 'jsonp', // Non funzionerà davvero, serve solo per forzare GET
+                error: function () {
+                    // Google Forms non supporta JSONP, quindi va in errore ma il submit è ok
+                    $('#bootstrapForm').hide();
+                    $('#grazieMsg').removeClass('d-none');
+                    alert('Pizza inviata. Graziee.');
+                    // Puoi anche fare un redirect qui se vuoi
+                    // window.location = 'http://www.mydomain.com/thankyoupage.html'
+                }
+            });
         });
     </script>
 </body>
