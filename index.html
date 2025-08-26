@@ -93,7 +93,6 @@
 <body>
     <div class="form-container">
         <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSfqgijKT6jR7MQ_tNePRCMCcc4ZezlFkOLJ7pO2M_Qi9aDvlA/formResponse"
             target="_self" id="bootstrapForm" method="POST">
             <fieldset>
                 <h2>
@@ -216,22 +215,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/4.2.2/jquery.form.min.js"
         integrity="sha256-2Pjr1OlpZMY6qesJM68t2v39t+lMLvxwpa8QlRjJroA=" crossorigin="anonymous"></script>
     <script>
-        $('#bootstrapForm').submit(function (event) {
-            event.preventDefault();
-            var extraData = {};
-            $('#bootstrapForm').ajaxSubmit({
-                data: extraData,
-                dataType: 'jsonp', // Non funzionerà davvero, serve solo per forzare GET
-                error: function () {
-                    // Google Forms non supporta JSONP, quindi va in errore ma il submit è ok
-                    $('#bootstrapForm').hide();
-                    $('#grazieMsg').removeClass('d-none');
-                    alert('Pizza inviata. Graziee.');
-                    // Puoi anche fare un redirect qui se vuoi
-                    // window.location = 'http://www.mydomain.com/thankyoupage.html'
-                }
-            });
-        });
+      $('#bootstrapForm').on('submit', function (event) {
+    event.preventDefault(); // stop browser submit
+
+    $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLSfqgijKT6jR7MQ_tNePRCMCcc4ZezlFkOLJ7pO2M_Qi9aDvlA/formResponse",
+        data: $(this).serialize(),
+        type: "POST",
+        dataType: "xml", // Google Forms answers with XML, not JSON
+        success: function () {
+            $('#bootstrapForm').hide();
+            $('#grazieMsg').removeClass('d-none');
+        },
+        error: function () {
+            // Still treat as success, since CORS usually blocks the real response
+            $('#bootstrapForm').hide();
+            $('#grazieMsg').removeClass('d-none');
+        }
+    });
+});
     </script>
 </body>
 
